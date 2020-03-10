@@ -47,10 +47,10 @@ projects:
   # youtube: your_username
 
 topics:
-  - name: BallCuber
+  - name: BallCuber : Patented fast 4x4x4 Rusbik's cube solving robot
     web_url: https://ballcuber.github.io
     image_url: https://ballcuber.github.io/assets/kinematic/KinematicCrossRows.gif
 
-  - name: OnShape for Mixed Reality
+  - name: OnShape for Augmented Reality (Hololens)
     web_url: https://OnShape-MR.github.io
     image_url: https://raw.githubusercontent.com/OnShape-MR/OnShape-MR.github.io/master/onshape-mr.png
