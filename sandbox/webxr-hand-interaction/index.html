@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="common.css"/>
     <script src="Build/UnityLoader.js"></script>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <script src="/js/libs/three/three.min.js"></script>
-    <script module src="/js/webxr.js"></script>
+    <script src="js/libs/three/three.min.js"></script>
+    <script module src="js/webxr.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163892314-1"></script>
 	<script>
@@ -72,12 +72,12 @@
 
 
             // some dependencies and utilities
-            import * as mat4 from '/js/libs/gl-matrix/mat4.js'
-            import * as vec3 from '/js/libs/gl-matrix/vec3.js'
+            import * as mat4 from './js/libs/gl-matrix/mat4.js'
+            import * as vec3 from './js/libs/gl-matrix/vec3.js'
 
 
-            import XREngine from "/js/XREngine.js"
-            import XRInputManager from "/js/XRInputManager.js"
+            import XREngine from "./js/XREngine.js"
+            import XRInputManager from "./js/XRInputManager.js"
 
             let device = null
             let session = null
