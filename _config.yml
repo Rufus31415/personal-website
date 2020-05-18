@@ -1,56 +1,89 @@
-layout: sidebar #stacked #sidebar
-style: dark #light
+#-------------------------------
+# General Site Settings
+title: Rufus31415 portfolio
+logo: # You can add own logo. For example '/images/logo.png'.
+description: Here are some experiences that I would like to share as a geek and an industrial software engineer.
+baseurl: "" # The subpath of your site, e.g. /blog
+url: "" # The base hostname & protocol for your site, e.g. http://example.com
 
+github: https://github.com/rufus31415
+
+#-------------------------------
+# Author Settings
+author:
+  name: Florent GIRAUD
+  avatar: '/images/avatar.png'
+
+
+#-------------------------------
+# Hero Settings
+hero: 
+  title: Welcome
+  description: Thoughts, stories, ideas, geeky projects.
+  image: 
+
+
+#-------------------------------
+# Contact Settings
+contact:
+  email: xzbjdrky # Add your email for contant form
+  description: Do not hesitate to contact me by filling in the following form. Your message will arrive in my mailbox and I will try to answer it quickly. You can also contact me at rufus31415[at<span></span>]gmail.com. See you soon :)
+
+# NOTE
+# Aditu theme comes with a contact form built-in. You can use this form with Formspree service and get up to 50 submissions for free. Also, you can easily switch to another service if you want.
+
+
+#-------------------------------
+# Footer section
+# Example of adding a new link to the footer - {icon: "ion-logo-github", link: "https://github.com"}
+# Other icons can be found at https://ionicons.com
+social:
+- {icon: "ion ion-logo-github", link: "https://github.com/rufus31415"}
+
+
+#-------------------------------
+# Comment Section (Disqus)
+#disqus-identifier:  # Add your shortname for Disqus Comment. For example mr-brown
+
+
+#-------------------------------
+# Google Analytics
+google-analytics: UA-163892314-1 # Add your identifier. For example UA-99631805-1.
+
+
+#-------------------------------
+# Newsletter
+mailchimp: false # To enable the mailchimp form, use the value true. To turn off use the value false.
+mailchimp-identifier: # Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
+
+
+#-------------------------------
+# Build settings
+markdown: kramdown
+permalink: /:title:output_ext
 plugins:
-  - jekyll-octicons
-  - jekyll-github-metadata
-  - jemoji
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll/tagging
 
-permalink: /:year/:month/:day/:title/
+paginate: 9
+paginate_path: "/page/:num"
 
+# Pages Path
 defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts"
+  - scope:
+      path: '_pages'
     values:
-      layout: "post"
+      permalink: /:basename:output_ext
 
-projects:
-  sort_by: pushed
-  # sort_by options:
-  #   - pushed
-  #   - stars
-  limit: 9
-  exclude:
-    archived: false
-    forks: true
-    projects:
-    # - repo-name
+include:
+  - _pages
 
-# social_media:
-  # behance: your_username
-  # dribbble: your_username
-  # facebook: your_username
-  # hackerrank: your_username
-  # instagram: your_username
-  # keybase: your_username
-  # linkedin: your_username
-  # mastodon: your_username
-  # medium: your_username
-  # stackoverflow: your_user_id
-  # telegram: your_username
-  # twitter: your_username
-  # unsplash: your_username
-  # vk: your_username
-  # website: http://your_website_url
-  # youtube: your_username
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag_page
+tag_permalink_style:  pretty
 
-topics:
-  - name: BallCuber - Patented fast 4x4x4 Rubik's cube solving robot
-    web_url: https://ballcuber.github.io
-    image_url: https://ballcuber.github.io/assets/kinematic/KinematicCrossRows.gif
-
-  - name: OnShape for Augmented Reality (Hololens)
-    web_url: https://OnShape-MR.github.io
-    image_url: https://raw.githubusercontent.com/OnShape-MR/OnShape-MR.github.io/master/onshape-mr.png
+sass:
+  sass_dir: _sass
+  style: compressed

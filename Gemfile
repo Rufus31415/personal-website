@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
-gem "jekyll-github-metadata"
-gem "jekyll-octicons"
-gem "jemoji"
+gem "bundler"
+gem "jekyll"
+gem "jekyll-paginate"
+gem 'jekyll-tagging'
+gem "jekyll-sitemap"

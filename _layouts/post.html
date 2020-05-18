@@ -1,70 +1,125 @@
-{% include header.html %}
-
-{% capture post_body %}
-  {% if site.social_media %}
-    {% assign shareable_social_media = '' | split: ',' %}
-
-    {% for account in site.social_media %}
-      {% assign service_shortname = account[0] %}
-      {% assign service = site.data.social_media[service_shortname] %}
-
-      {% if service.share_url_prefix %}
-        {% assign shareable_social_media = shareable_social_media | push: service %}
-      {% endif %}
-    {% endfor %}
-
-    {% assign total_shareable_services = shareable_social_media | size %}
-
-    {% if total_shareable_services > 0 %}
-      <div class="col-sm-4 col-lg-3 d-flex flex-wrap flex-items-center d-sm-block float-sm-right border rounded-2 bg-white p-3 mb-5 ml-md-5">
-        <h3 class="text-gray-dark mr-3 mr-sm-0">Share</h3>
-        <ul class="d-flex d-sm-block list-style-none">
-          {% for service in shareable_social_media %}
-            <li class="mt-sm-3">
-              <a href="{{ service.share_url_prefix }}{{ page.url | prepend: site.url | prepend: site.baseurl | url_encode }}" title="Share on {{ service.name }}" class="d-flex flex-items-center">
-                <div style="width:32px">{{ service.icon_svg }}</div><span class="d-none d-sm-inline-block text-gray-light">{{ service.name }}</span>
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endif %}
-  {% endif %}
-  <div class="article">
-    {{ content }}
-  </div>
-{% endcapture %}
-
-{% if site.layout == 'stacked' %}
-  <div class="container-lg py-6 p-responsive text-center">
-    {% include masthead.html metadata=false %}
-
-    <div class="container-md f4 text-left border rounded-2 bg-white p-3 p-sm-5 mt-6">
-      <p class="f5"><a href="/" class="d-flex flex-items-center">{% octicon chevron-left height:16 class:"mr-2 v-align-middle" fill:#0366d6 aria-label:Home %}Home</a></p>
-      <h1 class="f00-light lh-condensed">{{ page.title }}</h1>
-      <p class="{% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %} mb-5">Published {{ page.date | date: "%b %d, %Y"}}</p>
-      {{ post_body }}
-    </div>
-  </div>
-{% else %}
-  <div class="d-md-flex min-height-full {% unless site.style == 'dark' %}border-md-bottom{% endunless %}">
-    <div class="flex-self-stretch {% if site.style == 'dark' %}bg-gray-dark{% else %}border-md-right border-gray-light bg-white{% endif %} col-md-5 col-lg-4 col-xl-3 px-4 px-md-6 px-lg-7 py-6">
-      {% include masthead.html metadata=true %}
-    </div>
-
-    <div class="col-md-7 col-lg-8 col-xl-9 px-4 py-6 px-lg-7 border-top border-md-top-0 bg-gray-light" {% if site.style == 'dark' %}style="background-color: #2f363d !important"{% endif %}>
-      <div class="mx-auto" style="max-width: 900px;">
-        <div class="f4 {% if site.style == 'dark' %}text-white{% endif %} mb-6">
-          <div class="f4 {% if site.style == 'dark' %}text-white{% endif %}">
-            <p class="f5"><a href="{{ site.url }}{{ site.baseurl | append:'/' }}" class="d-flex flex-items-center {% if site.style == 'dark' %}text-white{% endif %}">{% octicon chevron-left height:16 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Home %}Home</a></p>
-            <h1 class="f00-light lh-condensed">{{ page.title }}</h1>
-            <p class="{% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %} mb-5">Published {{ page.date | date: "%b %d, %Y"}}</p>
-            {{ post_body }}
-          </div>
-        </div>
+---
+layout: default
+---
+{% if page.image %}
+<div class="container">
+  <div class="row">
+    <div class="col col-12">
+      <div class="image-box">
+        <img class="post-image" src="{{site.baseurl}}{{page.image}}" alt="{{page.title}}">
       </div>
     </div>
   </div>
+</div>
 {% endif %}
 
-{% include footer.html %}
+<div class="container">
+  <div class="row">
+    <div class="col col-8 col-d-10 push-2 push-d-1 col-t-12 push-t-0">
+      <!-- begin post -->
+      <article class="post animate">
+
+        <div class="post-head">
+          {% if page.tags.size >= 1 %}
+          <div class="post-tags">
+            {% for tag in page.tags %}
+            <a href="{{ site.baseurl }}/tag/{{ tag }}" class="post-tags__tag">{{ tag }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+          <h1 class="post-title">{{ page.title | escape }}</h1>
+          <div class="post__meta">
+            <div class="post__author">
+              <a href="{{site.baseurl}}/about/" class="post__author-image"
+                style="background-image: url({{site.baseurl}}{{site.author.avatar}})"
+                aria-label="{{site.author.name}}'s Picture"></a> <a href="{{site.baseurl}}/about/"
+                class="post__author-link">{{site.author.name}}</a>
+            </div>
+            <span class="post__date">
+              <time datetime="{{ page.date | date_to_xmlschema }}">{{page.date | date: '%b %d, %Y'}}</time>
+            </span>
+          </div>
+        </div>
+
+        <div class="post__content">
+          {{ content }}
+        </div>
+
+        <div class="post__share">
+          <div class="share__head">
+            <div class="share__title">Share this article</div>
+          </div>
+          <ul class="share__list list-reset">
+            <li class="share__item">
+              <a class="share__link share__facebook"
+                href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+            </li>
+
+            <li class="share__item">
+              <a class="share__link share__twitter"
+                href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on Twitter" rel="nofollow"><i class="ion ion-logo-twitter"></i></a>
+            </li>
+
+            <li class="share__item">
+              <a class="share__link share__linkedin"
+                href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title | uri_escape }}&summary={{ page.description | uri_escape }}&source={{ site.title | uri_escape }}"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+            </li>
+
+            <li class="share__item">
+              <a class="share__link share__pinterest"
+                href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&amp;media={{ site.url }}{{ site.baseurl }}{{ page.image }}&amp;description={{ page.title | uri_escape }}"
+                onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+                title="Share on Pinterest" rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
+            </li>
+          </ul>
+        </div>
+        {% if page.hn_link and page.hn_id %}
+        <div class="post__comment">
+          <a href="https://news.ycombinator.com/item?id={{page.hn_id}}" target="_blank">+ Leave a comment on Hacker News</a>
+          <comment-box title="Comments" site="{{page.hn_link}}" class="post__commentBox"></comment-box>
+          <hr />
+          {% endif %}
+
+          {% if page.reddit_link and page.reddit_id %}
+          <a href="{{page.reddit_link}}" target="_blank">+ Leave a comment on Reddit</a>
+          <div style="background-color: whitesmoke;">
+            <blockquote class="reddit-card" data-card-created="{{page.reddit_id}}"><a href="{{page.reddit_link}}">+ Leave
+                a comment on Reddit</a></blockquote>
+          </div>
+          <hr />
+          {% endif %}
+        </div>
+
+        <div class="post__navigation">
+          {% if page.previous.url %}
+          <a class="prev" href="{{page.previous.url}}" style="background-image: url({{page.previous.image}})">
+            <div class="post__nav-box">
+              <div class="post__nav post__nav__prev"><i class="ion ion-ios-arrow-back"></i> Previous
+                Page</div>
+              <h4 class="post__nav__title">{{page.previous.title}}</h4>
+            </div>
+          </a>
+          {% endif %}
+          {% if page.next.url %}
+          <a class="next" href="{{page.next.url}}" style="background-image: url({{page.next.image}})">
+            <div class="post__nav-box">
+              <div class="post__nav post__nav__next">Next Page <i class="ion ion-ios-arrow-forward"></i></div>
+              <h4 class="post__nav__title">{{page.next.title}}</h4>
+            </div>
+          </a>
+          {% endif %}
+        </div>
+
+        {% if site.disqus-identifier %} {% include disqus-comments.html %} {% endif %}
+
+      </article>
+      <!-- end post -->
+    </div>
+  </div>
+</div>

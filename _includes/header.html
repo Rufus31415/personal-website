@@ -1,44 +1,51 @@
-{% if site.style == 'dark' %}
-  {% assign icon_color = "#ffffff" %}
-{% else %}
-  {% assign icon_color = "#24292e" %}
-{% endif %}
+<!-- begin header -->
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="header__inner col col-12">
 
-{% assign content = page.content %}
+      <div class="logo">
+        <a class="logo__link" href="{{ site.baseurl }}/">
+        {%if site.logo %}
+          <img class="logo__image" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}">
+        {% else %}
+          {{ site.title }}
+        {% endif %}
+        </a>
+      </div>
+        
+      <div class="menu-overlay">
+        <nav class="main-nav">
+          <div class="main-nav__box">
+            <div class="nav__icon-close">
+              <i class="ion ion-md-close"></i>
+            </div>
+            <div class="nav-grid">
+              <div class="nav-grid__item">
+                <h2 class="nav-grid__title">Menu</h2>
+                <div class="mobile-nav">
+                  {%include navigation.html%}
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
 
-{% assign posts_total = site.posts | size %}
+      <div class="navigation">
+        <div class="top-nav">
+          {%include navigation.html%}
+        </div>
+        <div class="nav-buttons">
+          <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+          <i class="nav__icon nav__icon-search ion ion-md-search"></i>
+        </div>
+      </div>
 
-{% assign user = site.github.owner %}
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->
 
-{% if page.path contains '_posts' %}
-  {% assign page_title = page.title %}
-  {% assign meta_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
-{% else %}
-  {% assign page_title = user.name %}
-  {% assign meta_description = user.bio | strip_html | strip_newlines | xml_escape | truncate: 300 %}
-{% endif %}
-
-<!doctype html>
-<html class="min-height-full">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page_title }}</title>
-    <meta name="description" content="{{ meta_description }}" />
-    <meta property="og:title" content="{{ user.name }}" />
-    <meta property="og:image" content="{{ user.avatar_url }}" />
-    <meta property="og:description" content="{{ meta_description }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="{{ "/assets/styles.css" | relative_url }}" rel="stylesheet" type="text/css">
-	
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163892314-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-163892314-1');
-	</script>
-
-  </head>
-  <body class="bg-white min-height-full" {% if site.style == 'dark' %}style="background-color: #2f363d !important"{% endif %}>
+{% include search.html %}
