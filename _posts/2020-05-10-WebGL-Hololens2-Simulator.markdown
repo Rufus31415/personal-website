@@ -9,3 +9,6 @@ hn_link: https://rufus31415.github.io/sandbox/webgl-hololens2-simulation/
 ---
 
 
+Demo : [https://rufus31415.github.io/sandbox/webgl-hololens2-simulation/](https://rufus31415.github.io/sandbox/webgl-hololens2-simulation/){:target="_blank"}
+
+Source : [https://github.com/Rufus31415/MixedRealityToolkit-Unity-WebGL-Hololens2-Simulator](https://github.com/Rufus31415/MixedRealityToolkit-Unity-WebGL-Hololens2-Simulator){:target="_blank"}
