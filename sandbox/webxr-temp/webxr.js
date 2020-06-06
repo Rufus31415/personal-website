@@ -193,13 +193,13 @@
     let glLayer = new XRWebGLLayer(session, this.ctx);
     session.updateRenderState({ baseLayer: glLayer });
 
-      let refSpaceType = 'local';
+    let refSpaceType = 'local';
 
-      var onSessionEnded = this.onEndSession.bind(this);
-      session.addEventListener('end', onSessionEnded);
+    var onSessionEnded = this.onEndSession.bind(this);
+    session.addEventListener('end', onSessionEnded);
 
-      this.canvas.width = glLayer.framebufferWidth;
-      this.canvas.height = glLayer.framebufferHeight;
+    this.canvas.width = glLayer.framebufferWidth;
+    this.canvas.height = glLayer.framebufferHeight;
 
     session.requestReferenceSpace(refSpaceType).then((refSpace) => {
       session.refSpace = refSpace;
@@ -239,15 +239,10 @@
 
     var xrData = this.xrData;
 
-    for (let view of pose.views) {
-      if (view.eye === 'left') {
-        xrData.leftProjectionMatrix = this.GLProjectionToUnity(view.projectionMatrix);
-        xrData.leftViewMatrix = this.GLViewToUnity(view.transform.inverse.matrix);
-      } else if (view.eye === 'right') {
-        xrData.rightProjectionMatrix = this.GLProjectionToUnity(view.projectionMatrix);
-        xrData.rightViewMatrix = this.GLViewToUnity(view.transform.inverse.matrix);
-      }
-    }
+
+    xrData.leftProjectionMatrix = this.GLProjectionToUnity(view.projectionMatrix);
+    xrData.leftViewMatrix = this.GLViewToUnity(view.transform.inverse.matrix);
+
 
     // Dispatch event with headset data to be handled in webxr.jslib
     document.dispatchEvent(new CustomEvent('XRData', {
