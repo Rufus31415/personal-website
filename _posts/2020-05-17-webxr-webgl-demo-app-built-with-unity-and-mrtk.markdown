@@ -3,7 +3,7 @@ layout: post
 title:  WebXR demo app built with Unity and MRTK
 date:   2020-05-17
 image:  '/images/WebXR-demo-app-built-with-Unity-and-MRTK.jpg'
-tags:   WebGL
+tags:   WebGL WebXR Unity MRTK Javascript
 hn_id: 23235013
 hn_link: https://rufus31415.github.io/webxr-webgl-demo-app-built-with-unity-and-mrtk.html
 ---

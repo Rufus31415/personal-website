@@ -3,7 +3,7 @@ layout: post
 title:  Sharer is an Arduino and .NET communication library
 date:   2019-05-05
 image:  '/images/Sharer-NET-Arduino-communication-library.jpg'
-tags:   Arduino
+tags:   Arduino .NET
 hn_id: 
 hn_link: 
 reddit_id: 1589817094
