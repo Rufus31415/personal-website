@@ -6,6 +6,7 @@ image:  '/images/WebGL-Hololens2-Simulator.jpg'
 tags:   WebGL Unity MRTK Javascript
 hn_id: 23156521
 hn_link: https://rufus31415.github.io/sandbox/webgl-hololens2-simulation/
+repo: MixedRealityToolkit-Unity-WebGL-Hololens2-Simulator 
 ---
 
 

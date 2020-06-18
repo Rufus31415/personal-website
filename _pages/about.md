@@ -5,6 +5,12 @@ permalink: /about/
 image: '/images/about.jpg'
 ---
 
+<center>
+<a class="github-button" href="https://github.com/rufus31415" data-size="large" data-show-count="true" aria-label="Follow @rufus31415 on GitHub">Follow @rufus31415</a>
+</center>
+<hr />
+
+
 Hi, my name is Florent GIRAUD aka Rufus31415. I don't know why I chose this nickname, it's quite recent, maybe because I like the first name Rufus and PI...
 
 
