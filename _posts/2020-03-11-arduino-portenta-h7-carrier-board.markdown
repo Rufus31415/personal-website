@@ -4,6 +4,8 @@ title:  Arduino Portenta H7 development board
 date:   2020-03-11
 image:  '/images/arduino-portenta-h7-carrier-board.jpg'
 tags:   Arduino
+twitter: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I just got my <a href="https://twitter.com/arduino?ref_src=twsrc%5Etfw">@arduino</a> PRO Portenta H7. I&#39;m soldering the prototype board ! 🤓<a href="https://t.co/7FyBy4kQkR">https://t.co/7FyBy4kQkR</a> <a href="https://t.co/w6h2YKjABg">pic.twitter.com/w6h2YKjABg</a></p>&mdash; Florent (@rufus31415) <a href="https://twitter.com/rufus31415/status/1273517717941780481?ref_src=twsrc%5Etfw">June 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
 ---
 
 
