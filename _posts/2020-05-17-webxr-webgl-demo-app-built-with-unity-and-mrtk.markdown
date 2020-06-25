@@ -13,7 +13,7 @@ This article describes how I had the WebXR target to the MRTK, allowing to do au
 
 Associated Github repository : [https://github.com/Rufus31415/MixedRealityToolkit-Unity-WebXR](https://github.com/Rufus31415/MixedRealityToolkit-Unity-WebXR/)
 
-**Live demo** (please use [WebXR Viewer browser](https://apps.apple.com/us/app/webxr-viewer/id1295998056){:target="_blank"} app on iOS) : [https://rufus31415.github.io/sandbox/webxr-hand-interaction/](https://rufus31415.github.io/sandbox/webxr-hand-interaction/){:target="_blank"}
+**Live demo** (please use [WebXR Viewer browser](https://apps.apple.com/us/app/webxr-viewer/id1295998056){:target="_blank"} app on iOS) : [https://rufus31415.github.io/sandbox/webxr-hand-interaction/](https://rufus31415.github.io/sandbox/webxr-hand-interaction/)
 
 <p><iframe src="https://www.youtube.com/embed/msORgnO6R9U?cc_load_policy=1&rel=0" frameborder="0" allowfullscreen></iframe></p>
 
