@@ -10,7 +10,7 @@ hn_link: https://rufus31415.github.io/webxr-webgl-demo-app-built-with-unity-and-
 
 This article describes how I had the WebXR target to the MRTK, allowing to do augmented reality in the web browser. This project is a proof of concept and not an industrial implementation ! I developed this demonstration over a long weekend in confinement.
 
-Associated Github repository : [https://github.com/Rufus31415/MixedRealityToolkit-Unity-WebXR](https://github.com/Rufus31415/MixedRealityToolkit-Unity-WebXR/){:target="_blank"}
+Associated Github repository : [https://github.com/Rufus31415/MixedRealityToolkit-Unity-WebXR](https://github.com/Rufus31415/MixedRealityToolkit-Unity-WebXR/)
 
 **Live demo** (please use [WebXR Viewer browser](https://apps.apple.com/us/app/webxr-viewer/id1295998056){:target="_blank"} app on iOS) : [https://rufus31415.github.io/sandbox/webxr-hand-interaction/](https://rufus31415.github.io/sandbox/webxr-hand-interaction/){:target="_blank"}
 
