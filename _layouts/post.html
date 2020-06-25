@@ -37,8 +37,27 @@ layout: default
             </div>
             <span class="post__date">
               <time datetime="{{ page.date | date_to_xmlschema }}">{{page.date | date: '%b %d, %Y'}}</time>
-            </span>
+            </span>           
+
           </div>
+          {% if page.repo %}
+
+            {% if page.user %}
+              {% assign user = page.user %}
+            {% else %}
+              {% assign user = "Rufus31415" %}
+            {% endif %}
+
+            <div class="post__github">
+              <a class="github-button" href="https://github.com/{{user}}/{{page.repo}}" data-icon="octicon-star" data-size="large" data-show-count="true"  aria-label="Star {{user}}/{{page.repo}} on GitHub">Star</a>
+              <a class="github-button" href="https://github.com/{{user}}/{{page.repo}}" data-icon="octicon-eye" data-size="large" data-show-count="true"  aria-label="Watch {{user}}/{{page.repo}} on GitHub">Watch</a>
+              <a class="github-button" href="https://github.com/{{user}}/{{page.repo}}/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true"  aria-label="Fork {{user}}/{{page.repo}} on GitHub">Fork</a>
+            </div>
+            <div class="post__github">
+              <a class="github-button" href="https://github.com/{{user}}/{{page.repo}}"  data-size="large" aria-label="Fork {{user}}/{{page.repo}} on GitHub">View on GitHub</a>
+            </div>
+          {% endif %}
+
         </div>
 
         <div class="post__content">
@@ -79,8 +98,8 @@ layout: default
             </li>
           </ul>
         </div>
-        {% if page.hn_link and page.hn_id %}
         <div class="post__comment">
+        {% if page.hn_link and page.hn_id %}
           <a href="https://news.ycombinator.com/item?id={{page.hn_id}}" target="_blank">+ Leave a comment on Hacker News</a>
           <comment-box title="Comments" site="{{page.hn_link}}" class="post__commentBox"></comment-box>
           <hr />
@@ -93,6 +112,11 @@ layout: default
                 a comment on Reddit</a></blockquote>
           </div>
           <hr />
+          {% endif %}
+          {% if page.twitter %}
+          <center>
+            {{page.twitter}}
+          </center>
           {% endif %}
         </div>
 

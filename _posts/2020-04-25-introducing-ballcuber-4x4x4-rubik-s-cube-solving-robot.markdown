@@ -3,11 +3,13 @@ layout: post
 title: Introducing BallCuber - 4x4x4 Rubik's Cube solving robot
 date:   2020-05-09
 image:  '/images/introducing-ballcuber-4x4x4-rubik-s-cube-solving-robot.jpg'
-tags:   Ballcuber
+tags:   BallCuber Arduino 3D .NET
 hn_id: 22986398
 hn_link: https://ballcuber.github.io/
 reddit_id: 1589872168
 reddit_link: https://www.reddit.com/r/Cubers/comments/g6k1j5/4x4x4_rubiks_cube_solving_robot/
+repo: ballcuber.github.io
+user: ballcuber
 ---
 
 Official website : [https://ballcuber.github.io](https://ballcuber.github.io){:target="_blank"}

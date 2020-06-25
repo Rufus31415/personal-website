@@ -3,9 +3,10 @@ layout: post
 title:  WebGL 45+ 3D file formats viewer
 date:   2020-05-09
 image:  '/images/WebGL-3D-CAD-model-viewer.jpg'
-tags:   WebGL
+tags:   WebGL WebXR 3D Javascript
 hn_id: 23141506
 hn_link: https://rufus31415.github.io/sandbox/3d-viewer/
+repo: react-webgl-3d-viewer-demo
 ---
 
 This 3D viewer is purely made of javascript that runs locally on your browser. It allows you to load 45+ 3D model formats.

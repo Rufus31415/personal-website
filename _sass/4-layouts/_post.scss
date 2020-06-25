@@ -86,6 +86,18 @@
   color: $white;
 }
 
+.post__github {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: $white;
+}
+
+.post__github > span {
+  margin: 2em 1em 0 1em;
+}
+
 .post__author {
   display: flex;
   align-items: center;

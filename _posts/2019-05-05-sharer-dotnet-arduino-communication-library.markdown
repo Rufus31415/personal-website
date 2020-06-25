@@ -3,11 +3,12 @@ layout: post
 title:  Sharer is an Arduino and .NET communication library
 date:   2019-05-05
 image:  '/images/Sharer-NET-Arduino-communication-library.jpg'
-tags:   Arduino
+tags:   Arduino .NET
 hn_id: 
 hn_link: 
 reddit_id: 1589817094
 reddit_link: https://www.reddit.com/r/arduino/comments/fr7khr/arduino_net_serial_communication_library_to/
+repo: Sharer
 ---
 Sharer is both a <b>.NET and an Arduino Library</b>. It allows a desktop application to <b>read/write variables</b> and <b>remote call functions on Arduino</b>, using the Sharer protocole accross a serial communication.
 Sharer has initially been developped for the [Ballcuber project](https://ballcuber.github.io){:target="_blank"}, but it is now a standalone library ;).
