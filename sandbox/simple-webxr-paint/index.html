@@ -16,7 +16,7 @@
       UnityLoader.SystemInfo.browser = "Firefox"; // another workaround to prevent the warning popup from opening on unknown browsers
     }
 
-    var gameInstance = UnityLoader.instantiate("gameContainer", "Build/16.json", { onProgress: UnityProgress });
+    var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Paint.json", { onProgress: UnityProgress });
 
     // on iOS 13+, show request permission button
     document.addEventListener("SimpleWebXRNeedMotionPermission", () => {
