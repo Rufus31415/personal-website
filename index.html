@@ -5,21 +5,26 @@ layout: default
 {% include hero.html %}
 
 <div class="container">
+  <div style="margin-bottom: 2em;">
+    <h1>Side-projects timeline :</h1>
+    <iframe
+      src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1nU-e3X9q0quWBp4wQiPRuo506948GxBnlaqHF6_nonc&font=Default&lang=en&start_at_end=true&initial_zoom=1&height=600'
+      width='100%' height='600' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+  </div>
   <div class="row">
-    <div class="col col-12">
-      <div class="container__inner">
-        <div class="contaniner__inner-box">
-          <div class="row grid">
-            {% if site.posts.size > 0 %}
-              {% for post in paginator.posts %}
-                {% include article-content.html %}
-              {% endfor %}
-            {% endif %}
-          </div>
-        </div>
+    <h1>Articles :</h1>
+    <div class="contaniner__inner-box">
+      <div class="row grid">
+        {% if site.posts.size > 0 %}
+        {% for post in paginator.posts %}
+        {% include article-content.html %}
+        {% endfor %}
+        {% endif %}
       </div>
     </div>
   </div>
+</div>
+</div>
 </div>
 
 {% include pagination.html %}
