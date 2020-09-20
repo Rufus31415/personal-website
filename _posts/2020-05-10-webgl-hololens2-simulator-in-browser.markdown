@@ -9,6 +9,7 @@ hn_link: https://rufus31415.github.io/sandbox/webgl-hololens2-simulation/
 repo: MixedRealityToolkit-Unity-WebGL-Hololens2-Simulator 
 ---
 
+⚠️⚠️⚠️ This sample was a test, please visit the official repository : [SimpleWebXR for Unity](https://github.com/Rufus31415/Simple-WebXR-Unity) ⚠️⚠️⚠️
 
 Demo : [https://rufus31415.github.io/sandbox/webgl-hololens2-simulation/](https://rufus31415.github.io/sandbox/webgl-hololens2-simulation/){:target="_blank"}
 

@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>WebXR with MixedRealityToolkit</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163892314-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
 
-	  gtag('config', 'UA-163892314-1');
-	</script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>WebXR with MixedRealityToolkit</title>
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <link rel="stylesheet" href="TemplateData/style.css">
+  <script src="TemplateData/UnityProgress.js"></script>
+  <script src="Build/UnityLoader.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163892314-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <script>
-		UnityLoader.SystemInfo.mobile = false;  // workaround to prevent the warning popup from opening on mobile phone
-	  
-		if(["Edge","Firefox","Chrome","Safari"].indexOf(UnityLoader.SystemInfo.browser)==-1){
-			UnityLoader.SystemInfo.browser = "Firefox"; // another workaround to prevent the warning popup from opening on unknown browsers
-		}
-		
-		var gameInstance = UnityLoader.instantiate("gameContainer", "Build/build9.json", {onProgress: UnityProgress});
-    </script>
-  </head>
-  <body>
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1);gameInstance.SendMessage('WebXR','StartSession');"></div>
-        <div class="title">MixedRealityToolkit-WebXR (<a href="https://rufus31415.github.io/webxr-webgl-demo-app-built-with-unity-and-mrtk.html">🛠️ See how it works</a>)</div>
+    gtag('config', 'UA-163892314-1');
+  </script>
+
+  <script>
+    if (confirm("This prototype is obsolete, do you want to be redirected to the current version?")) {
+      window.location.replace("https://rufus31415.github.io/sandbox/simple-webxr-mrtk/");
+    }
+
+
+    UnityLoader.SystemInfo.mobile = false;  // workaround to prevent the warning popup from opening on mobile phone
+
+    if (["Edge", "Firefox", "Chrome", "Safari"].indexOf(UnityLoader.SystemInfo.browser) == -1) {
+      UnityLoader.SystemInfo.browser = "Firefox"; // another workaround to prevent the warning popup from opening on unknown browsers
+    }
+
+    var gameInstance = UnityLoader.instantiate("gameContainer", "Build/build9.json", { onProgress: UnityProgress });
+  </script>
+</head>
+
+<body>
+  <div class="webgl-content">
+    <div id="gameContainer" style="width: 960px; height: 600px"></div>
+    <div class="footer">
+      <div class="webgl-logo"></div>
+      <div class="fullscreen" onclick="gameInstance.SetFullscreen(1);gameInstance.SendMessage('WebXR','StartSession');">
       </div>
+      <div class="title">MixedRealityToolkit-WebXR (<a
+          href="https://rufus31415.github.io/webxr-webgl-demo-app-built-with-unity-and-mrtk.html">🛠️ See how it
+          works</a>)</div>
+      <div class="title">This prototype is obsolete, please <a href="https://rufus31415.github.io/sandbox/simple-webxr-mrtk/">visit this version</a>.</div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
