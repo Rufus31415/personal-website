@@ -7,6 +7,7 @@ image: '/images/about.jpg'
 
 <center>
 <a class="github-button" href="https://github.com/rufus31415" data-size="large" data-show-count="true" aria-label="Follow @rufus31415 on GitHub">Follow @rufus31415</a>
+<a href="https://twitter.com/rufus31415?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="true">Follow @rufus31415</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </center>
 <hr />
 

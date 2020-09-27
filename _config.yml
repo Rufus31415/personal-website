@@ -65,7 +65,7 @@ permalink: /:title:output_ext
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll/tagging
+#  - jekyll/tagging
 
 paginate: 9
 paginate_path: "/page/:num"
@@ -81,9 +81,9 @@ include:
   - _pages
 
 # Tags
-tag_page_dir:         tag
-tag_page_layout:      tag_page
-tag_permalink_style:  pretty
+#tag_page_dir:         tag
+#tag_page_layout:      tag_page
+#tag_permalink_style:  pretty
 
 sass:
   sass_dir: _sass
