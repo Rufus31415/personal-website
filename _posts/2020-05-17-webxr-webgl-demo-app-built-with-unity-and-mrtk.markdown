@@ -6,7 +6,7 @@ image:  '/images/WebXR-demo-app-built-with-Unity-and-MRTK.jpg'
 tags:   WebGL WebXR Unity MRTK Javascript
 hn_id: 23235013
 hn_link: https://rufus31415.github.io/webxr-webgl-demo-app-built-with-unity-and-mrtk.html
-repo: MixedRealityToolkit-Unity-WebXR
+repo: Simple-WebXR-Unity
 ---
 
 EDIT :
@@ -15,7 +15,7 @@ EDIT :
 
 
 
-This article describes how I had the WebXR target to the MRTK, allowing to do augmented reality in the web browser. This project is a proof of concept and not an industrial implementation ! I developed this demonstration over a long weekend in confinement.
+This article describes how I add the WebXR target to the MRTK, allowing to do augmented reality in the web browser. This project is a proof of concept and not an industrial implementation ! I developed this demonstration over a long weekend in confinement.
 
 Associated Github repository : [https://github.com/Rufus31415/MixedRealityToolkit-Unity-WebXR](https://github.com/Rufus31415/MixedRealityToolkit-Unity-WebXR/)
 
