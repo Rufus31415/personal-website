@@ -9,30 +9,30 @@ hn_link: https://rufus31415.github.io/sandbox/3d-viewer/
 repo: react-webgl-3d-viewer-demo
 ---
 
-This 3D viewer is purely made of javascript that runs locally on your browser. It allows you to load 45+ 3D model formats.
+This 3D viewer is made purely of JavaScript that runs locally in a person's browser. It allows you to load 45+ 3D model formats.
 
-Demo : [https://rufus31415.github.io/sandbox/3d-viewer](https://rufus31415.github.io/sandbox/3d-viewer){:target="_blank"}
+Demo: [https://rufus31415.github.io/sandbox/3d-viewer](https://rufus31415.github.io/sandbox/3d-viewer){:target="_blank"}
 
-It is based on WebGL and WebAssembly technologies as well as the Unity 3D rendering engine and the Assimp library. It also relies on a lot of code I wrote myself.
+It's based on WebGL and WebAssembly technologies, as well as the Unity 3D rendering engine and the Assimp library. It also relies on a lot of code that I wrote myself.
 
-This demo is entirely developed in React and bootstrapped with "Create React App". It allows you to load your own models as well as my demo models.
+This demo is entirely developed in React and bootstrapped with "Create React App". It allows you to load your own custom models as well as my provided demo models.
 
-It has been tested with :
+It has been tested with:
 - Firefox on Windows
 - Chrome on Windows
 - Edge on Windows
-- Safari on iOS (you should disable WebGL2.0 in experimental features)
+- Safari on iOS (**note:** you should disable WebGL 2.0 for your Safari browser in your iOS Setttings under Experimental Features)
 
-If WebGL2.0 is not supported by your browser, the rendering is switched to WebGL1.0.
+If WebGL 2.0 is not supported by your browser, the rendering is automatically toggled to WebGL 1.0.
 
-Unfortunately, I can't publish the code that decodes 3D formats because I had to buy several proprietary libraries I and can only distribute compiled binaries.
+Unfortunately, I can't publish the code that decodes the 3D formats because I had to buy several proprietary libraries and can only distribute the compiled binaries.
 
-You can browse the list of supported formats on the right. The long text is often taken from Wikipedia. The 3D models come from the free models of Assimp or from models made by myself.
+You can browse the list of supported formats displayed in the panel to the left. The long text is often taken from Wikipedia. The provided 3D models either come from free models of Assimp or self-created models made by me.
 
-You can also load your own 3D models by browsing your disk or by pointing to a url. If one of your models doesn't load, could you email it to me at [rufus31415@gmail.com](mailto:rufus31415@gmail.com) for debug purposes ?
+You can also load custom 3D models by uploading your own model or by inserting a online URL. If one of your models doesn't load, please email it to me at [rufus31415@gmail.com](mailto:rufus31415@gmail.com) for further debugging.
 
-# Supported formats
-Here are the supported formats :
+# Supported Formats
+
 - 3DS
 - 3MF
 - AC
@@ -79,9 +79,8 @@ Here are the supported formats :
 - X3D
 - XGL
 
-# What's next ?
+# Roadmap
 
-Here are the features I would like to add:
 - Animation support
 - Extending the support of the STEP format
 - Add format detection if no extension is specified
@@ -92,15 +91,19 @@ Here are the features I would like to add:
 - Improve the handling of external resources (texture files, image...)
 - Add other formats (like Solidworks, Creo, Catia, ...)
 
-I don't know yet if I will continue to develop this viewer to make it a separate product. It will depend on the craze around.
+I don't know yet if I will continue to develop this viewer to make it a separate product: it will depend on whether it gains sufficient popularity.
 
-If that's the case, I could make it a separate React component that could be installed via NPM.
+If it does, I could make it a separate React component that can be installed via the package-manager: NPM.
+
+i.e.
+
+### NPM:
 
 ``` shell
 npm install my-super-3d-viewer-react 
 ```
 
-And the javascript code would looks like :
+### JavaScript:
 
 ``` js
 import Viewer from 'my-super-3d-viewer-react'
@@ -133,10 +136,9 @@ export default function App() {
 }
 ```
 
-Why not also isolate the loader to make it an extension to other 3D engines like Three.js.
+# Final Comments
 
-Why not buy a Unity pro account to remove the watermak when loading.
-
-I would also like to reduce the size of the build, it is currently ~8Mb.
-
-I hope you'll like it, don't hesitate to ask me for improvements or ideas!
+- Why not also isolate the loader to make it an extension to other 3D engines like Three.js
+- Why not buy a Unity Pro subscription to remove the Unity watermark at runtime
+- I would also like to reduce the size of the build: it's currently ~8mb
+- I hope you'll like it, don't hesitate to ask me for improvements or ideas
